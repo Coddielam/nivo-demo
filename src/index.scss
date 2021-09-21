@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.app {
+  height: 100%;
+}
+
+.chart-container {
+  background-color: rgba(173, 216, 230, 0.089);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  .chart-frame {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    .tooltip {
+      position: fixed;
+      background-color: whitesmoke;
+      border: 1px solid darkgray;
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      z-index: 999;
+    }
+    > div {
+      display: flex;
+      width: 100%;
+    }
+    .date-range-picker {
+      display: flex;
+      select {
+        height: 20px;
+      }
+    }
+  }
+}
